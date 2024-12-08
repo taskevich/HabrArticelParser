@@ -88,7 +88,7 @@ func main() {
 	pagesNum := getPagesCount(c)
 
 	for i := 1; i <= pagesNum; i++ {
-		c.Visit(fmt.Sprintf("https://habr.com/ru/feed/page%d/", i))
+		c.Visit(fmt.Sprintf("%s/page%d/", BASEURL, i))
 	}
 
 	c.Wait()
